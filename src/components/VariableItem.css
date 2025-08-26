@@ -1,0 +1,138 @@
+/* Variable item styles - vertical layout */
+.variable-item {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.2s ease;
+  width: 100%;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.variable-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.variable-item--updated {
+  border-left: 4px solid #49796B;
+  background-color: #f8fff9;
+}
+
+.variable-item--changed {
+  border-left: 4px solid #ffc107;
+  background-color: #fffbf0;
+}
+
+/* Label row - contains label and status */
+.variable-item__label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.variable-item__label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.2;
+  word-break: break-word;
+  flex: 1;
+}
+
+.variable-item__changed-indicator {
+  color: #ffc107;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.variable-item__status-inline {
+  color: #000;
+  font-weight: 500;
+  font-size: 12px;
+  background-color: rgba(40, 167, 69, 0.15);
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Input row */
+.variable-item__input-row {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.variable-item__input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  background-color: #fff;
+}
+
+.variable-item__input:focus {
+  outline: none;
+  border-color: #007acc;
+  box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.1);
+}
+
+/* Checkbox styling */
+.variable-item__checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.variable-item__checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #007acc;
+}
+
+.variable-item__checkbox-label {
+  font-size: 14px;
+  color: #495057;
+  font-weight: 500;
+}
+
+/* Info section */
+.variable-item__info {
+  font-size: 11px;
+  color: #6c757d;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 8px;
+  margin-top: auto;
+}
+
+.variable-item__original {
+  line-height: 1.3;
+}
+
+.variable-item__original code {
+  background-color: #f1f3f4;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-family: monospace;
+  font-size: 10px;
+  word-break: break-all;
+}
+
+
+/* Input type specific adjustments */
+.variable-item__input[type="datetime-local"] {
+  font-family: monospace;
+}
+
+.variable-item__input[type="number"] {
+  font-family: monospace;
+}

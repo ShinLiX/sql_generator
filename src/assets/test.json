@@ -1,0 +1,28 @@
+{
+  "NAME": "TASK1",
+  "APP":"PSSBL",
+  "DES":"Tsssss",
+  "TASK_TRIGGER_MARKER_FILE":"",
+  "SERVICE":"DL_A",
+  "START_TIME":"2019-09-01T00:01:00",
+  "LATEST_EXPECTED_TIME":"2019-09-01T00:03:00",
+  "END_TIME":"2019-10-01T00:02:00",
+  "HOLIDAY_CAL_NAME":"",
+  "ENABLE_LOG":0,
+  "CREATED_BY":"PRIMEDB",
+  "CREATED":"2018-10-18T11:02:33",
+  "QUERY_BODY":"None",
+  "task_schedule":{
+    "ACTIVE":0,
+    "RUN_BY_DEAMON":1,
+    "REPEATABLE":0,
+    "RUN_MON":1,
+    "RUN_TUE":1,
+    "RUN_WED":1,
+    "RUN_THU":1,
+    "RUN_FRI":1,
+    "RUN_SAT":0,
+    "RUN_SUN":0,
+    "REPEAT_INTERVAL":""
+  }
+}

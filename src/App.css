@@ -1,0 +1,225 @@
+.App {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 12px 24px;
+  background: white;
+  border-bottom: 1px solid #dee2e6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.App-main {
+  padding: 20px;
+}
+
+/* Horizontal bar for dropdown, input, and button */
+.job-bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* Dropdown styling */
+.job-type-dropdown {
+  min-width: 180px;
+  height: 42px;
+  padding: 8px 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #495057;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.job-type-dropdown:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+.job-type-dropdown:hover {
+  border-color: #28a745;
+}
+
+/* Job name input styling */
+.job-name-autocomplete {
+  position: relative;
+  min-width: 200px;
+}
+
+.job-name-input {
+  height: 42px;
+  padding: 8px 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #495057;
+  width: 1105px;
+  transition: border-color 0.2s ease;
+}
+
+.job-name-input:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+.job-name-input:hover:not(:disabled) {
+  border-color: #28a745;
+}
+
+.job-name-input:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.job-name-input::placeholder {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Autocomplete Suggestions */
+.job-name-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.job-name-suggestion {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #495057;
+  border-bottom: 1px solid #f8f9fa;
+  transition: background-color 0.2s ease;
+}
+
+.job-name-suggestion:hover {
+  background-color: #f8f9fa;
+}
+
+.job-name-suggestion:last-child {
+  border-bottom: none;
+}
+
+/* Hint text */
+.job-name-hint {
+  font-size: 12px;
+  color: #6c757d;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+/* Remove unused label styles */
+.job-type-label,
+.job-name-label {
+  display: none;
+}
+
+/* Remove unused selector wrappers */
+.job-type-selector,
+.job-name-selector {
+  display: none;
+}
+
+/* Remove placeholder option styling if not needed */
+.job-type-dropdown option[value=""] {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Button in job-bar */
+.job-bar button {
+  margin-left: 0;
+}
+
+/* Loading and message styles */
+.loading-indicator {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+  margin: 20px 0;
+}
+
+.no-task-message {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 16px;
+  }
+  .job-bar {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .App-main {
+    padding: 16px;
+  }
+  .loading-indicator,
+  .no-task-message {
+    margin: 16px 0;
+    padding: 30px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    padding: 12px;
+  }
+  .job-bar {
+    gap: 8px;
+  }
+  .job-type-dropdown,
+  .job-name-input {
+    font-size: 13px;
+    padding: 6px 10px;
+    height: 36px;
+  }
+  .job-name-hint {
+    font-size: 12px;
+  }
+  .App-main {
+    padding: 12px;
+  }
+  .loading-indicator,
+  .no-task-message {
+    padding: 20px 15px;
+    font-size: 13px;
+  }
+}
